@@ -15,15 +15,26 @@ import Calls from './calls'
 import Chats from './chats'
 import Contacts from './contacts'
 import ScrollableTabView from 'react-native-scrollable-tab-view'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class ThreePanels extends Component {
   render() {
     return (
-   <ScrollableTabView style ={{marginTop:10}}>
-        <Calls tabLabel="Calls" />
-        <Chats tabLabel="The Homies" />
-        <Contacts tabLabel="Contacts" />
+      <View style={{flex:1}}>
+      <View style ={styles.topBit}>
+      <Text style={styles.logo}>WhatsApp</Text>
+      <View style={styles.row}>
+      <Icon name="search" color='#fff' size={23} style={{padding:5}} />
+      <Icon name = "chat" color='#fff' size={23} style={{padding:5}} />
+      <Icon name="more-vert" color='#fff' size={23} style={{padding:5}} />
+      </View>
+      </View>
+   <ScrollableTabView tabBarUnderlineColor="#fff"  tabBarBackgroundColor ='#075e54' tabBarActiveTextColor ="#fff" tabBarInactiveTextColor="#88b0ac">
+        <Calls tabLabel="YO MAMAS" />
+        <Chats tabLabel="FRIENDS" />
+        <Contacts tabLabel="EVERYONE" />
       </ScrollableTabView>
+      </View>
     );
   }
 }
@@ -40,10 +51,22 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  logo:{
+    color:'#fff',
+    fontSize:23,
+    margin:10,
+    marginLeft:20,
+    fontWeight:'500',
+  },
+  row:{
+    flexDirection:'row'
+  },
+  topBit:{
+    flexDirection:'row',
+    alignItems:'center',
+    paddingTop:15,
+    backgroundColor:'#075e54',
+    justifyContent:'space-between'
   },
 });
 
