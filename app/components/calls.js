@@ -120,13 +120,14 @@ export default class Calls extends Component {
 <View style={{alignItems:'center', padding:10, flexDirection:'row', borderBottomWidth:1, borderColor:'#f7f7f7' }}>
    <Image source = {x.image} style={{borderRadius:30, width:60,height:60, }} resizeMode='contain' />
   <View>
-  <View style={{flexDirection:'row', justifyContent:'space-between', width:280}}>
-  <Text style={{marginLeft:15, fontWeight:'600', color:'#444'}}>{x.first_name}'s Mom</Text>
+  <View style={{flexDirection:'row', justifyContent:'space-between', width:260}}>
+  <Text style={{marginLeft:15, fontWeight:'600', color:'#222'}}>{x.first_name}'s Mom</Text>
   </View>
   <View style={{flexDirection:'row', alignItems:'center'}}>
-  <Icon name ="done-all" size = {15} color="#7dd5df" style={{marginLeft:15, marginRight:5}} />
-  <Text style={{ fontWeight:'400', color:'#333'}}>{x.date}  {x.time}</Text></View>
+  <Icon name ="call-received" size = {15} color="#ed788b" style={{marginLeft:15, marginRight:5}} />
+  <Text style={{ fontWeight:'400', color:'#666', fontSize:12}}>{x.date}  {x.time}</Text></View>
   </View>
+  <Icon name = "call" size ={23} color = '#777' style={{marginRight:10}} />
 
    </View>
    </TouchableOpacity>
