@@ -5,12 +5,14 @@
  */
 
 import React, { Component } from 'react';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import {
   AppRegistry,
   StyleSheet,
   ScrollView,
   ListView,
   Image,
+  TouchableOpacity,
   Text,
   View
 } from 'react-native';
@@ -26,6 +28,7 @@ var image8 = require('../images/image8.jpeg')
 var image9 = require('../images/image9.jpeg')
 var image10 = require('../images/image10.jpeg')
 var image11 = require('../images/image11.jpeg')
+
 
 var data = [{
   "id": 1,
@@ -178,13 +181,21 @@ export default class Chats extends Component {
 
   eachMessage(x){
     return(
-<View style={{alignItems:'center', padding:10, flexDirection:'row'}}>
+      <TouchableOpacity>
+<View style={{alignItems:'center', padding:10, flexDirection:'row', borderBottomWidth:1, borderColor:'#f7f7f7' }}>
    <Image source = {x.image} style={{borderRadius:30, width:60,height:60, }} resizeMode='contain' />
   <View>
+  <View style={{flexDirection:'row', justifyContent:'space-between', width:280}}>
   <Text style={{marginLeft:15, fontWeight:'600'}}>{x.first_name} {x.last_name}</Text>
-  <Text style={{marginLeft:15, fontWeight:'300'}}>{x.message}</Text>
+  <Text style={{color:'#333', fontSize:10}}>{x.time}</Text>
   </View>
+  <View style={{flexDirection:'row', alignItems:'center'}}>
+  <Icon name ="done-all" size = {15} color="#7dd5df" style={{marginLeft:15, marginRight:5}} />
+  <Text style={{ fontWeight:'400', color:'#333'}}>{x.message}</Text></View>
+  </View>
+
    </View>
+   </TouchableOpacity>
       )
   }
 
