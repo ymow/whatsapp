@@ -17,17 +17,17 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-var image1 = require('../images/image1.jpeg')
-var image2 = require('../images/image2.jpeg')
-var image3 = require('../images/image3.jpeg')
-var image4 = require('../images/image4.jpeg')
-var image5 = require('../images/image5.jpeg')
+var image1 = require('../images/image11.jpeg')
+var image2 = require('../images/image10.jpeg')
+var image3 = require('../images/image9.jpeg')
+var image4 = require('../images/image8.jpeg')
+var image5 = require('../images/image7.jpeg')
 var image6 = require('../images/image6.jpeg')
-var image7 = require('../images/image7.jpeg')
-var image8 = require('../images/image8.jpeg')
-var image9 = require('../images/image9.jpeg')
-var image10 = require('../images/image10.jpeg')
-var image11 = require('../images/image11.jpeg')
+var image7 = require('../images/image5.jpeg')
+var image8 = require('../images/image4.jpeg')
+var image9 = require('../images/image3.jpeg')
+var image10 = require('../images/image2.jpeg')
+var image11 = require('../images/image1.jpeg')
 var data = [{
   "id": 1,
   "first_name": "Bruce",

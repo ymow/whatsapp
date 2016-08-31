@@ -59,7 +59,7 @@ var data = [{
   "image": image3
 }, {
   "id": 4,
-  "first_name": "Timothy",
+  "first_name": "Linda",
   "last_name": "Wells",
   "time": "2:12 AM",
   "message": "vehicula",
@@ -68,7 +68,7 @@ var data = [{
   "image": image4
 }, {
   "id": 5,
-  "first_name": "Harry",
+  "first_name": "Samantha",
   "last_name": "Lee",
   "time": "11:23 AM",
   "message": "amet",
@@ -95,7 +95,7 @@ var data = [{
   "image": image7
 }, {
   "id": 8,
-  "first_name": "Walter",
+  "first_name": "Maya",
   "last_name": "Carr",
   "time": "11:28 PM",
   "message": "purus aliquet at",
@@ -104,7 +104,7 @@ var data = [{
   "image": image8
 }, {
   "id": 9,
-  "first_name": "Paul",
+  "first_name": "Paula",
   "last_name": "Kelly",
   "time": "12:36 PM",
   "message": "aliquam lacus morbi",
@@ -113,7 +113,7 @@ var data = [{
   "image": image9
 }, {
   "id": 10,
-  "first_name": "Thomas",
+  "first_name": "Ruth",
   "last_name": "Carr",
   "time": "3:05 PM",
   "message": "integer tincidunt",
@@ -122,7 +122,7 @@ var data = [{
   "image": image10
 }, {
   "id": 11,
-  "first_name": "Chris",
+  "first_name": "Christy",
   "last_name": "Cook",
   "time": "10:02 PM",
   "message": "parturient montes nascetur",
@@ -149,7 +149,7 @@ var data = [{
   "image": image2
 }, {
   "id": 14,
-  "first_name": "Albert",
+  "first_name": "Ally",
   "last_name": "Little",
   "time": "12:45 AM",
   "message": "mauris morbi non",
@@ -158,7 +158,7 @@ var data = [{
   "image": image3
 }, {
   "id": 15,
-  "first_name": "George",
+  "first_name": "Georgie",
   "last_name": "Little",
   "time": "10:24 AM",
   "message": "rhoncus aliquam lacus",
@@ -180,6 +180,27 @@ export default class Chats extends Component {
   }
 
   eachMessage(x){
+    var num = Math.floor(Math.random() * 3) + 1
+
+    if(num > 1){
+     return(
+      <TouchableOpacity>
+<View style={{alignItems:'center', padding:10, flexDirection:'row', borderBottomWidth:1, borderColor:'#f7f7f7' }}>
+   <Image source = {x.image} style={{borderRadius:30, width:60,height:60, }} resizeMode='contain' />
+  <View>
+  <View style={{flexDirection:'row', justifyContent:'space-between', width:280}}>
+  <Text style={{marginLeft:15, fontWeight:'600'}}>{x.first_name} {x.last_name}</Text>
+  <Text style={{color:'#333', fontSize:10}}>{x.time}</Text>
+  </View>
+  <View style={{flexDirection:'row', alignItems:'center'}}>
+  <Text style={{ fontWeight:'400', color:'#333', marginLeft:15}}>Can I come over to yours tonight?</Text></View>
+  </View>
+
+   </View>
+   </TouchableOpacity>
+      )
+   }
+
     return(
       <TouchableOpacity>
 <View style={{alignItems:'center', padding:10, flexDirection:'row', borderBottomWidth:1, borderColor:'#f7f7f7' }}>
