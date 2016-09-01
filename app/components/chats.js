@@ -172,6 +172,7 @@ var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 export default class Chats extends Component {
     constructor(props){
     super(props)
+    
 
     this.state = {
       dataSource: ds.cloneWithRows(data),
@@ -184,7 +185,7 @@ export default class Chats extends Component {
 
     if(num > 1){
      return(
-      <TouchableOpacity>
+      <TouchableOpacity onPress ={() => {this.props.navigator.push({id:'chat', image:x.image, name:x.first_name})}}>
 <View style={{alignItems:'center', padding:10, flexDirection:'row', borderBottomWidth:1, borderColor:'#f7f7f7' }}>
    <Image source = {x.image} style={{borderRadius:30, width:60,height:60, }} resizeMode='contain' />
   <View>

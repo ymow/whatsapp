@@ -31,7 +31,7 @@ export default class ThreePanels extends Component {
       </View>
    <ScrollableTabView tabBarUnderlineColor="#fff"  tabBarBackgroundColor ='#075e54' tabBarActiveTextColor ="#fff" tabBarInactiveTextColor="#88b0ac">
         <Calls tabLabel="YO' MAMAS" />
-        <Chats tabLabel="YO' GIRLS" />
+        <Chats tabLabel="YO' GIRLS" {...this.props} />
         <Contacts tabLabel="MA NI**AS" />
       </ScrollableTabView>
       </View>
