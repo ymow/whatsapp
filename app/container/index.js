@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 
 
 import * as reducers from '../reducers';
-import Components from '../components/threeTabs';
+import Components from '../components/';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const reducer = combineReducers(reducers);
