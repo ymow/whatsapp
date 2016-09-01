@@ -82,15 +82,15 @@ export default class Chaty extends Component {
   render() {
     return (
       <Image source={require('../images/background.jpg')} style={styles.container}>
-       <View style={{height:70, flexDirection:'row', justifyContent:'space-between', backgroundColor:'#075e54', alignItems:'center', paddingTop:10}}>
+       <View style={{height:65, flexDirection:'row', justifyContent:'space-between', backgroundColor:'#075e54', alignItems:'center', paddingTop:10}}>
        <View style = {{flexDirection:'row', flex:1, alignItems:'center'}}>
        <Icon name="navigate-before" color='#fff' size={23} style={{}} />
        <Image source = {require('../images/image1.jpeg')} style={{width:30, height:30, borderRadius:15, margin:5}} />
        <Text style={{color:'#fff', fontWeight:'600', margin:10, fontSize:15}}>Alexia</Text>
        </View>
        <View style={styles.row}>
-      <Icon name="search" color='#fff' size={23} style={{padding:5}} />
-      <Icon name = "chat" color='#fff' size={23} style={{padding:5}} />
+      <Icon name="call" color='#fff' size={23} style={{padding:5}} />
+      <Icon name = "attach-file" color='#fff' size={23} style={{padding:5}} />
       <Icon name="more-vert" color='#fff' size={23} style={{padding:5}} />
       </View>
        </View>
